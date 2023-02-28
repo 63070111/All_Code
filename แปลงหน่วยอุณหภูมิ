@@ -1,0 +1,57 @@
+#include<stdio.h>
+double celsiusToFahrenheit(double c)
+{
+    double h;
+    h = 32+(c*(180.0/100.0));
+    return h;
+}
+double fahrenheitToCelcius(double f)
+{
+    double p;
+    p = (f-32)/(180.0/100.0);
+    return p;
+}
+void printCelcius(double total)
+{
+    printf("%.2lf c", total);
+}
+ 
+void printFarenheit(double full)
+{
+    printf("%.2lf f", full);
+}
+  
+int main()
+{
+    double a,full,total;
+    char name;
+    scanf("%lf %c",&a,&name);
+    if ((name == 'c')||(name == 'C'))
+    {
+        full = celsiusToFahrenheit(a);
+        printFarenheit(full);
+    }
+    else
+    {
+        total = fahrenheitToCelcius(a);
+        printCelcius(total);
+        
+    }
+    return 0;
+}
+/* จงเขียนโปรแกรมแปลงหน่วยอุณหภูมิจาก Celcius เป็น Fahrenheit​
+เลขทศนิยมให้ใช้ double
+หมายเหตุ 
+ให้คำนึงกรณีที่ค่าอุณหภูมิติดลบด้วย
+ตัวอักขระ c และ f สามารถเป็นได้ทั้งตัวพิมพ์ใหญ่และพิมพ์เล็ก
+สูตรในการแปลงอุณหภูมิ ระหว่างหน่วยองศาเซลเซียสและฟาเรนไฮต์ คือ F = 32 + C (180.0/100.0)
+ในฟังก์ชัน main() ให้มีเฉพาะการรับค่าและเงื่อนไขการเช็คหน่วยองศา และจากนั้นเป็นการ call ฟังก์ชันย่อยเท่านั้น
+ในการเขียนโปรแกรมให้แยกออกเป็นฟังก์ชันย่อยตามข้างล่างนี้
+double celsiusToFahrenheit(double celcius);
+double fahrenheitToCelcius(double fahrenheit);
+void printFarenheit(double fahrenheit);
+void printCelcius(double celcius);
+ Sample Input    Sample Output
+    30 c             86.00 f
+    20 f             -6.67 c
+    70 F             21.11 c   */
