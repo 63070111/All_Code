@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<math.h>
+double Grader(double x,double y)
+{
+	double h;
+	h = hypot(x,y);
+	return h;
+}
+
+int main()
+{
+	double x,y;
+	double c;
+	scanf("%lf %lf",&x,&y);
+	c = Grader(x,y);
+	printf("sqrt(%.lf^2+%.lf^2)=%.2lf",x,y,c);
+	return 0;
+}
+
+/* จงเขียนโปรแกรมเพื่อคำนวณตำมสูตรต่อไปนี้โดยใช้ Standard Function ในกำรคำนวณ โดยมี การแสดงผลทางหน้าจอดังตัวอย่างและส่งเข้า Grader
+ Sample Input	 Sample Output
+     3 4       sqrt(3^2+4^2)=5.00
