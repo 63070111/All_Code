@@ -1,0 +1,63 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+	char value[] = "Male";
+	struct student_info{
+		char name[60];
+		char surname[60];
+		char sex[7];
+		int age;
+		char id[12];
+		float gpa;
+	}people;
+	scanf("%s",people.name);
+	scanf("%s",people.surname);
+	scanf("%s",people.sex);
+	scanf("%d",&people.age);
+	scanf("%s",people.id);
+	scanf("%f",&people.gpa);
+	if(strcmp(value,people.sex) == 0){
+		strcpy(people.sex, "Mr");
+		printf("%s %.1s %s (%d) ID: %s GPA %.2f",people.sex,people.name,
+			people.surname,people.age,people.id,people.gpa);
+	}
+	else
+	{
+		strcpy(people.sex, "Miss");
+		printf("%s %.1s %s (%d) ID: %s GPA %.2f",people.sex,people.name,
+			people.surname,people.age,people.id,people.gpa);
+	}
+	return 0;
+}
+/* จงเขียนโปรแกรมรับรายละเอียดนักศึกษาจำนวนหนึ่งคน โดยที่รับค่าและเก็บในรูปของ Structure
+โดยตั้งชื่อของ Structure ว่า student_info และมีชื่อ field ดังนี้
+ชื่อ (name)
+นามสกุล (surname)
+เพศ (sex)
+อายุ (age)
+รหัสนักศึกษา (id)
+เกรดเฉลี่ย (gpa)
+โดยการแสดงผล ถ้าเป็น Male ให้ใช้ Mr และถ้าเป็น Female ให้ใช้ Miss
+*Hint สำหรับบางคน:
+วิธีเปรียบเทียบข้อความ strcmp(str1, str2);
+Reference: http://www.cplusplus.com/reference/cstring/strcmp/
+วิธี assign ข้อความให้ใช้ strcpy(destination, source);
+Reference: http://www.cplusplus.com/reference/cstring/strcpy/
+ Input Specification	 Output Specification
+1 บรรทัด ประกอบด้วย
+ชื่อ มีความยาวไม่เกิน 60 ตัวอักษร
+นามสกุล มีความยาวไม่เกิน 60 ตัวอักษร
+เพศ
+อายุ
+รหัสนักศึกษา มีความยาวไม่เกิน 12 ตัวอักษร
+เกรดเฉลี่ย
+เงื่อนไขการแสดงผล
+ถ้าเป็น Male ให้ใช้คำนำหน้า Mr และถ้าเป็น Female ให้ใช้คำนำหน้า Miss
+ชื่อจริงให้แสดงเฉพาะ ตัวอักษรตัวแรก
+เกรดเฉลี่ย ทศนิยม 2 ตำแหน่ง
+                                  ตัวอย่างตาม Sample Output
+              Sample Case
+              Sample Input	                                      Sample Output
+Abhisit Vejjajiva Male 21 59070001 2.00           Mr A Vejjajiva (21) ID: 59070001 GPA 2.00
+Yingluck Shinnawatra Female 20 59070002 4.00      Miss Y Shinnawatra (20) ID: 59070002 GPA 4.00
+Prayut Chan-o-cha Male 62 00000044 1.12           Mr P Chan-o-cha (62) ID: 00000044 GPA 1.12
