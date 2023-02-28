@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+	double one,two;
+	double sum;
+	scanf("%lf %lf",&one,&two);
+	sum = sqrt((one*one)+(two*two));
+	printf("%.2lf",sum);
+	return 0;
+}
+//ตรีโกณมิติ
