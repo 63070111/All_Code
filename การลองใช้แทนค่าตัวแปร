@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<string.h>
+struct y{
+	char n[100];
+	char l[100];
+	int m;
+	int a;
+	int f = 0;
+}
+int main(){
+	while(n!="END"){
+		scanf("%s %s %d %d %d",n,l,m,a);
+
+	}
+	printf("%s %s %d %d %d",n,l,m,a);
+	return 0;
+}
