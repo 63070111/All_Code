@@ -1,0 +1,64 @@
+#include<stdio.h>
+#include<string.h>
+
+struct people
+{
+	char name[60][10];
+	char surname[60][10];
+	char sex[7];
+	int age;
+	char id[12];
+	float gpa;
+	char nup[7];
+	char rut[60][10];
+	char full[20];
+}p;
+
+void test(struct people p[])
+{
+	int i,j;
+	int n = 20;
+	for(i=0; i < n-1 ; i++)
+	{
+		for(j=i+1; j< n; j++)
+		{
+			if(strcmp(p.name[i],p.name[j]) > 0)
+			{
+				strcpy(p.full,p.name[i]);
+				strcpy(p.name[i],p.name[j]);
+				strcpy(p.name[j],p.full);
+			}
+		}
+		for(i=0; i< n ; i++)
+		{
+			printf("%s %.1s %s (%d) ID: %s GPA %.2f",p.sex,p.name,
+			p.surname,p.age,p.id,p.gpa);
+		}
+ 
+	}
+}
+
+int main()
+{
+	int i,j;
+	int n = 20;
+
+	for(i=0;i<n;i++)
+	{
+		scanf("%s",p.name);
+		strcpy (p.rut[i], p.name[i]);
+		scanf("%s",p.surname);
+		scanf("%s",p.sex);
+		scanf("%d",&p.age);
+		scanf("%s",p.id);
+		scanf("%f",&p.gpa);
+	}
+	scanf("%c",p.nup);
+	if ((p.nup == "n")||(p.nup == "N"))
+	{
+		test(p);
+	}
+	return 0;
+}
+/*เช่นเดียวกับข้อ Weather แต่เปลี่ยนการกำหนดพารามิเตอร์ของฟังก์ชันเป็น
+void playing_decision(struct Weather wt_param[], int n)
