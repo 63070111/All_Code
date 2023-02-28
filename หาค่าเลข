@@ -1,0 +1,122 @@
+#include<stdio.h>
+
+double getValue() 
+{
+    double value;
+    scanf("%lf", &value);
+    return value;
+}
+
+double findMin(double array[], int n)
+{
+	double full;
+	full = array[0];
+	for(int i=1; i<n;i++)
+	{
+		if(array[i] < full)
+		{
+			full = array[i];
+		}
+	}
+	return full;
+
+}
+
+double findMax(double array[], int n)
+{
+	double total;
+	total = array[0];
+	for(int i=1; i<n;i++)
+	{
+		if(array[i] > total)
+		{
+			total = array[i];
+		}
+	}
+	return total;
+
+}
+
+double findAvg(double array[], int n)
+{
+	double save,save1;
+	save = array[0],save1;
+	for(int i=1; i<n;i++)
+	{
+		save += array[i];
+	}
+	save1 = save/n;
+	return save1;
+
+}
+
+int main() 
+{
+    int n;
+    scanf("%d", &n);
+    
+    double array[n];
+    for (int i=0; i<n; ++i) 
+    {
+        array[i] = getValue();
+    }
+    double min, max, avg;
+    min = findMin(array, n);
+    max = findMax(array, n);
+    avg = findAvg(array, n);
+    printf("%d Values\n",n);
+    printf("Min: %.3lf\n",min);
+    printf("Max: %.3lf\n",max);
+    printf("Avg: %.3lf\n",avg);
+  return 0;
+
+/* จงเขียนโปรแกรมเพื่อรับข้อมูลเข้ามา N จำนวน และหาค่าน้อยที่สุด มากที่สุด และค่าเฉลี่ย
+โดยที่ในการเขียนโปรแกรมให้แยกออกเป็นฟังก์ชันย่อยใน main() ให้มีเฉพาะการ call ฟังก์ชันย่อยเท่านั้น โดยที่ฟังก์ชันประกอบไปด้วยฟังก์ชันดังนี้
+double getValue();  -  รับค่า double
+double getValue() {
+    double value;
+    scanf("%lf", &value);
+    return value;
+}
+double findMin(double array[], int size);  -  หาค่าที่น้อยที่สุด
+double findMax(double array[], int size);  -  หาค่าที่มากที่สุด
+double findAvg(double array[], int size);  -  หาค่าเฉลี่ย
+ค่า N ให้รับในฟังก์ชัน main() และวนลูบเรียกใช้ getValue();
+int main() {
+    int n;
+    scanf("%d", &n);
+    
+    double array[n];
+    for (int i=0; i<n; ++i) {
+        array[i] = getValue();
+    }
+    
+    double min, max, avg;
+    min = findMin(array, n);
+    max = findMax(array, n);
+    avg = findAvg(array, n);
+    ...
+    ...
+}
+
+บรรทัดแรก จำนวนเต็ม n (n >= 1)
+และอีก n บรรทัดเป็นตัวเลขทศนิยม  ( เลขทศนิยมใช้ Double )
+4 บรรทัด
+บรรทัดแรก จำนวนข้อมูลที่รับเข้ามา
+บรรทัดที่  2 ค่าที่น้อยที่สุด
+บรรทัดที่  3 ค่าที่มากที่สุด
+บรรทัดที่  4  ค่าเฉลี่ย
+ทศนิยม 3 ตำแหน่ง
+ Sample Case
+ Sample Input	 Sample Output
+     10            10 Values
+     2.3           Min: -7.320
+     1             Max: 9.800
+     4             Avg: 2.638
+     9.8
+     -7.32
+     5.2
+     1.2
+     5
+     3.2
+     2                                   */
