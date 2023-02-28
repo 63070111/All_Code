@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<string.h>
+
+
+struct Weather{
+		char outlook[9]; //outlook{overcast,sunny,rain}
+		int temperature;
+		int humidity;
+		char wind[1]; //wind{T,F}
+	}p;
+
+void playing_decision(struct Weather p)
+{
+	scanf("%s",p.outlook);
+	scanf("%d",&p.temperature);
+	scanf("%d",&p.humidity);
+	scanf("%s",p.wind);
+	if(strcmp(p.outlook,"overcast") == 0)
+	{
+		printf("yes\n");
+	}
+	else if ((strcmp(p.outlook,"rain") == 0) && (strcmp(p.wind,"F") == 0))
+	{
+		printf("yes\n");
+	}
+	else if ((strcmp(p.outlook,"rain") == 0) && (strcmp(p.wind,"T") == 0))
+	{
+		printf("no\n");
+	}
+	else if ((strcmp(p.outlook,"sunny") == 0) && (p.humidity> 77.5))
+	{
+		printf("no\n");
+	}
+	else if ((strcmp(p.outlook,"sunny") == 0) && (p.humidity<= 77.5))
+	{
+			printf("yes\n");
+	}
+}
+
+int main()
+{
+	int i;
+	int n;
+	scanf("%d",&n);
+
+	for(i=0;i<n;i++){
+		playing_decision(p);
+	}
+	return 0;
+}
+
+//2
+//rain 70 96 F
+//sunny 5 78 T
+//สร้างชนิดข้อมูลโครงสร้าง Weather สำหรับเก็บข้อมูลสภาพอากาศสำหรับ 1 วัน (แบบที่1)
