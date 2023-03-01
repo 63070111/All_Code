@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+	char value[] = "Male";
+	struct student_info{
+		char name[60];
+		char surname[60];
+		char sex[7];
+		int age;
+		char id[12];
+		float gpa;
+	}people;
+	scanf("%s",people.name);
+	scanf("%s",people.surname);
+	scanf("%s",people.sex);
+	scanf("%d",&people.age);
+	scanf("%s",people.id);
+	scanf("%f",&people.gpa);
+	if(strcmp(value,people.sex) == 0){
+		strcpy(people.sex, "Mr");
+		printf("%s %.1s %s (%d) ID: %s GPA %.2f",people.sex,people.name,
+			people.surname,people.age,people.id,people.gpa);
+	}
+	else
+	{
+		strcpy(people.sex, "Miss");
+		printf("%s %.1s %s (%d) ID: %s GPA %.2f",people.sex,people.name,
+			people.surname,people.age,people.id,people.gpa);
+	}
+	return 0;
+}
