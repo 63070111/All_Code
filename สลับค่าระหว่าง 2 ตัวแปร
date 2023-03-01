@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+  int valueA;
+  int valueB;
+  int *ptrA = &valueA;
+  int *ptrB = &valueB;
+
+  scanf("%d %d", &valueA, &valueB);
+
+  // Swap
+  int tmp = *ptrA; // สร้างตัวแปรชั่วคราวเพื่อเก็บค่า
+  *ptrA = *ptrB; // แก้ไขค่าของ ptrA โดยใช้ Pointer ให้เป็นค่าของ ptrB
+  *ptrB = tmp; // แก้ไขค่าของ ptrB โดยใช้ Pointer ให้เป็นค่าของ tmp
+
+  printf("%d %d", valueA, valueB);
+
+  return 0;
+}
+//โค๊ดตัวอย่างคือการสลับค่าระหว่าง 2 ตัวแปร โดยการใช้ Pointer จะเห็นว่า valueA และ valueB ถูกสลับค่ากัน แต่ในโค๊ดไม่ได้ไปยุ่งกับทั้ง 2 ตัวแปรเลย
