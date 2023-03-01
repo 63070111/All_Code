@@ -1,0 +1,623 @@
+<html>
+  <head>
+     <meta charset="UTF-8" />
+    <title>อีฟ พรปวีณ์ โสภณอริยนนท์ (63070111)
+    </title>
+    <style>
+      body{
+        --g1:hsl(126, 86%, 40%);
+        --g2:hsl(111, 59%, 68%);
+        --f1:hsl(49, 100%, 50%);
+        --f2:hsl(330, 96%, 38%);
+        --f3:hsl(6, 94%, 31%);
+        --f4:hsl(22, 98%, 46%);
+        --c1:hsl(40, 90%, 54%);
+        --c2:hsl(40, 90%, 54%);
+
+        --n1:rgb(204, 14, 8);
+        --n2:rgb(240, 145, 64);
+        --t1:rgb(250, 176, 78);
+        --t2:rgb(204, 14, 8);
+        margin:0;
+        font-family:sans-serif;
+      }
+   
+
+    @keyframes snows{
+      from{transform:rotate(10deg)}
+      to{transform:rotate(360deg)}
+      }
+
+      .crown{
+        border-radius:100%;
+        background:#C6D8BA;
+        padding: 15px;
+        position: absolute;
+        margin-top: 10%;
+        right: 50%;
+        box-shadow:0px 0px 50px 50px #FBFCFB;
+      }
+      .crown:nth-child(2){
+        width:1%;
+        height:1%;
+        top:2%;
+        left:35%;
+        border-radius:100%;
+        animation:snows 1s infinite linear;
+      }
+      .crown:nth-child(3){
+        width:1%;
+        height:1%;
+        top:2%;
+        left:48%;
+        border-radius:100%;
+        animation:snows 1s infinite linear;
+      }
+      .big{
+        width:5%;
+        height:5%;
+        border-radius:100%;
+        background:#C6D8BA;
+        position: absolute;
+        padding: 15px;
+        margin-top:-60%;
+        right:20%;
+        box-shadow:0px 0px 50px 50px #FBFCFB;
+        animation:snows 1s infinite linear;
+      }
+
+      .Soft{
+          padding: 0px;
+          width: 21%;
+          height:10%;
+          border-radius: 16px;
+          border: 5px solid var(--t1);
+          background-color: var(--t2);
+          font-size:18px;
+          position: absolute;
+          margin-top: 0%;
+          right: 0%;
+        
+        }
+      #txt_white{
+         color: white;
+         font-size: 1.8vw;
+         text-shadow: "yellow";
+       }
+
+     button:hover{
+      background: #FA6E4E;
+      height:20%;
+      width: 25%;
+      }
+    .crown:hover{
+      box-shadow:0px 0px 50px 50px #0BF549;
+      background:#109A35;
+    }
+
+    .big:hover{
+    box-shadow:0px 0px 50px 50px #6F08F4;
+      background:#C608F4;
+    }
+  
+      svg{
+         background:linear-gradient(to bottom, #03E5FF  ,#379CF1,#088DFB);
+         width:100%;
+       }
+       
+    </style>
+  </head>
+  <body>
+    <svg viewBox="0 0 100 100">
+      <!-- Code Here -->
+      <!-- สีใบไม้ -->
+      <pattern id="leaves" viewBox="0,0,5,2" width="12%" height="12%">
+        <rect width="150" height="19" fill="yellow"/>
+        <circle r="3" cx="2" cy="0" fill="#12692D"/>
+        <circle r="2" cx="2" cy="0" fill="#15D851"/>
+        <circle r=".9" cx="2" cy="0" fill="#000"/>
+        
+      </pattern>
+
+      <!-- สีตาราง -->
+      <pattern id="box" viewBox="0,0,10,10" width="1%" height="1%">
+          <rect fill="#0008" width="1" height="10" x="1" y="0"/>
+          <rect fill="#0008" width="1" height="10" x="3" y="0"/>
+          <rect fill="#0008" width="1" height="10" x="5" y="0"/>
+          <rect fill="#0008" width="1" height="10" x="7" y="0"/>
+          <rect fill="#0008" width="1" height="10" x="9" y="0"/>
+          <rect fill="#0008" width="10" height="1" x="0" y="1"/>
+          <rect fill="#0008" width="10" height="1" x="0" y="3"/>
+          <rect fill="#0008" width="10" height="1" x="0" y="5"/>
+          <rect fill="#0008" width="10" height="1" x="0" y="7"/>
+          <rect fill="#0001" width="10" height="1" x="0" y="9"/>
+          <path d="M0 0 h10 L9 1 h-8 v8 L0 10 z" fill="#000"/>
+          <path d="M10 10 h-10 L1 9 h8 v-8 L10 0 z" fill="#000"/>
+          <rect fill="#0002" width="10" height=".1" x="0" y="9.9"/>
+          <rect fill="#0002" width="10" height=".1" x="0" y="0"/>
+          <rect fill="#0002" height="10" width=".1" y="0" x="9.9"/>
+          <rect fill="#0002" height="10" width=".1" y="0" x="0"/>
+        </pattern>
+
+      <!-- ตาราง -->
+      <svg>
+      <animate attributeName="x" 
+          values="0;-15;5;-40" dur="4s" repeatCount="indefinite" />
+     
+      <rect  width="100" height="100" x="0" y="0" fill="url(#box)"/>
+    </svg>
+
+
+  
+      <!-- สีกล่องท้องฟ้า-->
+      <pattern id="sky" viewBox="0,0,9,9" width="20%" height="20%">
+          <rect fill="#0001" width="1" height="10" x="1" y="0"/>
+          <rect fill="#8001" width="1" height="10" x="3" y="0"/>
+          <rect fill="#0001" width="1" height="10" x="5" y="0"/>
+          <rect fill="#0001" width="1" height="10" x="7" y="0"/>
+          <rect fill="#0001" width="1" height="10" x="9" y="0"/>
+          <rect fill="#0001" width="10" height="1" x="0" y="1"/>
+          <rect fill="#0001" width="10" height="1" x="0" y="3"/>
+          <rect fill="#0001" width="10" height="1" x="0" y="5"/>
+          <rect fill="#0001" width="10" height="1" x="0" y="7"/>
+          <rect fill="#0001" width="10" height="1" x="0" y="9"/>
+          <path d="M0 0 h10 L9 1 h-8 v8 L0 10 z" fill="#0007"/>
+          <path d="M10 10 h-10 L1 9 h8 v-8 L10 10 z" fill="#0007"/>
+          <path d="M10 0 v10 L1 9 " fill="#0005"/>
+
+
+
+          <rect fill="#0002" width="10" height=".1" x="0" y="9.9"/>
+          <rect fill="#0002" width="10" height=".1" x="0" y="0"/>
+          <rect fill="#0002" height="10" width=".1" y="0" x="9.9"/>
+          <rect fill="#0002" height="10" width=".1" y="0" x="0"/>
+      </pattern>
+
+
+      <!-- กล่องท้องฟ้า-->
+      
+      <rect fill="url(#sky)" width="100" height="100" x="0" y="0"/>
+   
+
+
+
+       <!-- เมฆเทา-->
+       <svg>
+      <animate attributeName="y" 
+                     values="-100;10;20;0;-10;20;20;0" dur="8s" repeatCount="indefinite" />
+
+      <circle r="5" cx="87" cy="9" fill="#B9ADB8"/>
+      <circle r="7" cx="78" cy="9" fill="#B9ADB8"/>
+      <circle r="4" cx="70" cy="9" fill="#B9ADB8"/>
+      <circle r="3" cx="65" cy="9" fill="#B9ADB8"/>
+
+
+      <circle r="3" cx="16" cy="10" fill="#B9ADB8"/>
+      <circle r="5" cx="22" cy="10" fill="#B9ADB8"/>
+      <circle r="9" cx="30" cy="10" fill="#B9ADB8"/>
+      <circle r="7" cx="39" cy="10" fill="#B9ADB8"/>
+      <circle r="3" cx="47" cy="10" fill="#B9ADB8"/> 
+
+
+      <!-- เมฆขาว-->
+      <circle r="5" cx="87" cy="10" fill="#fff"/>
+      <circle r="7" cx="78" cy="10" fill="#fff"/>
+      <circle r="4" cx="70" cy="10" fill="#fff"/>
+      <circle r="3" cx="65" cy="10" fill="#fff"/>
+
+
+      <circle r="3" cx="16" cy="11" fill="#fff"/>
+      <circle r="5" cx="22" cy="11" fill="#fff"/>
+      <circle r="9" cx="30" cy="11" fill="#fff"/>
+      <circle r="7" cx="39" cy="11" fill="#fff"/>
+      <circle r="3" cx="47" cy="11" fill="#fff"/>
+    </svg>
+
+
+       
+
+       <!-- สีภูเขา1 -->
+      <pattern id="mountain1" viewBox="0,2,10,8" width="12%" height="10%">
+          <rect width="150" height="19" fill="#DC7633"/>
+          <circle r="16" cx="2" cy="2" fill="#1E46DD0"/>
+          <circle r="4"  cx="6" cy="6" fill="#1FE559"/>
+          <circle r=".9" cx="6" cy="6" fill="#FCFC00"/>
+          <circle r="2"  cx="3" cy="5" fill="#23E3C0"/>
+        </pattern>
+
+
+        <!-- สีภูเขา2 -->
+      <pattern id="mountain2" viewBox="3,4,8,6" width="12%" height="10%">
+          <rect width="150" height="19" fill="#4A235A"/>
+          <circle r="6"  cx="8" cy="2" fill="#F21F0C"/>
+          <circle r="4"  cx="8" cy="6" fill="#E74C3C "/>
+          <circle r=".9" cx="6" cy="6" fill="#EC81EE"/>
+          <circle r="2"  cx="3" cy="5" fill="#F39C12"/>
+        </pattern>
+
+         <!-- สีภูเขา3 -->
+      <pattern id="mountain3" viewBox="0,2,7,8" width="12%" height="10%">
+          <rect width="150" height="19" fill="#4A235A">
+          </rect>
+          <circle r="6"  cx="8" cy="2" fill="#F21F0C"/>
+          <circle r="4"  cx="8" cy="6" fill="#F0D054"/>
+          <circle r=".9" cx="9" cy="6" fill="#fff"/>
+          <circle r="2"  cx="3" cy="5" fill="#6D5A11"/>
+        </pattern>
+
+        <!-- สีเกระต่าย -->
+      <pattern id="rabbit" viewBox="0,3,15,9" width="12%" height="10%">
+          <rect width="150" height="19" fill="#ED0EDC"/>
+          <rect width="150" height="9" fill="#601E5B"/>
+        </pattern>
+
+
+
+        <!-- สีเหูกระต่าย -->
+      <pattern id="rabbitear" viewBox="0,3,4,9" width="12%" height="10%">
+          <rect width="150" height="19" fill="#ED0EDC"/>
+          <rect width="150" height="9" fill="#601E5B"/>
+        </pattern>
+
+
+
+
+      <!--หญ้า-->
+
+      <path stroke-width="2" fill="url(#mountain2)" stroke="black" troke-linecap="round" stroke-linejoin="round" style="opacity:.8"
+            d="M0,99 C10,-60 80,70 40,99 z"></path>
+
+      <path stroke-width="2" fill="url(#mountain3)" stroke="black" troke-linecap="round" stroke-linejoin="round" style="opacity:.6"
+            d="M40,99 C70,-40 70,100 80,99 z"></path>
+
+       <path stroke-width="2" fill="url(#mountain1)" stroke="black" troke-linecap="round" stroke-linejoin="round" style="opacity:.5"
+            d="M100,99 C90,20 80,100 70,99 z"></path>
+
+
+
+
+       <!--โคนเห็ด1-->
+       <path stroke-width="2" fill="#E38B2A" stroke="#E38B2A" troke-linecap="round" stroke-linejoin="round"
+            d="m45.2,53 h-10 l9,11 z"></path>
+       <path stroke-width="2" fill="#F3DDC5" stroke="#F3DDC5" troke-linecap="round" stroke-linejoin="round"
+            d="m55,39 h-14 l5,12.3 h7 z"></path>
+       <path stroke-width="2" fill="#EFC596" stroke="#EFC596" troke-linecap="round" stroke-linejoin="round"
+            d="m49,51.2 h-9 l3,-12 z"></path>
+       <path stroke-width="2" fill="#E8AF6F" stroke="#E8AF6F" troke-linecap="round" stroke-linejoin="round"
+            d="m53,53 h-7 l-1,11 z"></path>
+       <path stroke-width="2" fill="#6B4924" stroke="#6B4924" troke-linecap="round" stroke-linejoin="round"
+            d="m35,51 h3 l4,-12.2 h-7 z"></path>
+
+
+
+
+       <!-- เห็ด1 -->
+       <!--2--> 
+        <path stroke-width="2" fill="#3A6B08" stroke="#3A6B08" troke-linecap="round" stroke-linejoin="round"
+            d="m46,37 h-16 l5,-12 z"></path>
+      <!--3--> 
+        <path stroke-width="2" fill="#4E9209" stroke="#4E9209" troke-linecap="round" stroke-linejoin="round"
+            d="m35,23  l11,14 l9,-9 z "></path>
+      <!--6--> 
+        <path stroke-width="2" fill="#98F13D" stroke="#98F13D" troke-linecap="round" stroke-linejoin="round"
+            d="m46.9,37.1 l13,-18 l3,18 z "></path>
+      <!--4--> 
+         <path stroke-width="2" fill="#60B20C" stroke="#60B20C" troke-linecap="round" stroke-linejoin="round"
+            d="m35,22 l16,6 l9,-10 z"></path>
+      <!--5--> 
+        <path stroke-width="2" fill="#75D710" stroke="#75D710" troke-linecap="round" stroke-linejoin="round"
+            d="m33,21 l27,-3 l-12,-9 l-10,2.5 z"></path>
+      <!--1--> 
+        <path stroke-width="2" fill="#1A2A0A" stroke="#1A2A0A" troke-linecap="round" stroke-linejoin="round"
+            d="m30,37  l-2,-16 l9,-9 z"></path>
+
+
+
+
+
+
+
+       <!--โคนเห็ด2-->
+       <path stroke-width="2" fill="#E38B2A" stroke="#E38B2A" troke-linecap="round" stroke-linejoin="round" 
+            d="m79,76 h-15 l12,11 z"></path>
+       <path stroke-width="2" fill="#EFC596" stroke="#EFC596" troke-linecap="round" stroke-linejoin="round"
+            d="m77,74 h-9 l3,-12 z"></path>
+       <path stroke-width="2" fill="#F3DDC5" stroke="#F3DDC5" troke-linecap="round" stroke-linejoin="round"
+            d="m86.6,62 h-14 l5,12.3 h7 z"></path>
+       <path stroke-width="2" fill="#E8AF6F" stroke="#E8AF6F" troke-linecap="round" stroke-linejoin="round"
+            d="m84,76 h-7 l-1,11 z"></path>
+       <path stroke-width="2" fill="#6B4924" stroke="#6B4924" troke-linecap="round" stroke-linejoin="round"
+            d="m64,74 h3.5 l4,-12.2 h-7 z"></path>
+
+
+      <!-- เห็ด2 -->
+  
+      <!--1--> 
+      <path stroke-width="2" fill="#2F0B5E" stroke="#2F0B5E" troke-linecap="round" stroke-linejoin="round"
+            d="m67,60 h-14 l4,-12 z"></path>
+      <!--2--> 
+      <path stroke-width="2" fill="#55117E" stroke="#55117E" troke-linecap="round" stroke-linejoin="round"
+            d="m57,47  l8,-16 l8,9 l-5,20 z"></path>
+      <!--3-->  
+      <path stroke-width="2" fill="#391AC4" stroke="#391AC4" troke-linecap="round" stroke-linejoin="round"
+            d="m65.6,30  l8,10 l9,-12 z"></path>
+      <!--4--> 
+      <path stroke-width="2" fill="#A63BE7" stroke="#A63BE7" troke-linecap="round" stroke-linejoin="round"
+            d="m74.3,41  h16 l-5,-9 l-2,-4 z"></path>
+
+      <!--5--> 
+      <path stroke-width="2" fill="#665ADD" stroke="#665ADD" troke-linecap="round" stroke-linejoin="round"
+            d="m74,43 h15 l-8,17 z"></path>
+      <!--6--> 
+      <path stroke-width="2" fill="#CC9AEB" stroke="#CC9AEB" troke-linecap="round" stroke-linejoin="round"
+            d="m82.5,60 l7.9,-18 l4,18 z "></path>
+      <!--7--> 
+      <path stroke-width="2" fill="#5A4B9C" stroke="#5A4B9C" troke-linecap="round" stroke-linejoin="round"
+            d="m69,60 h13 l-7.9,-17.5 z"></path>
+
+      
+
+
+
+
+  
+
+
+       <!--โคนเห็ด3-->
+      <path stroke-width="2" fill="#E38B2A" stroke="#E38B2A" troke-linecap="round" stroke-linejoin="round"
+            d="m35,85 h-15 l12,11 z"></path>
+      <path stroke-width="2" fill="#EFC596" stroke="#EFC596" troke-linecap="round" stroke-linejoin="round"
+            d="m33,83.9 h-9 l3,-12 z"></path>
+      <path stroke-width="2" fill="#F3DDC5" stroke="#F3DDC5" troke-linecap="round" stroke-linejoin="round"
+            d="m43,72 h-14 l5,12.3 h7 z"></path>
+      <path stroke-width="2" fill="#E8AF6F" stroke="#E8AF6F" troke-linecap="round" stroke-linejoin="round"
+            d="m41,85.8 h-7 l-1,11 z"></path>
+       <path stroke-width="2" fill="#6B4924" stroke="#6B4924" troke-linecap="round" stroke-linejoin="round"
+            d="m19.9,84 h4 l4,-12.2 h-8 z"></path>
+
+
+
+       <!-- เห็ด3 -->
+      <path stroke-width="2" fill="#B30C0C" stroke="#B30C0C" troke-linecap="round" stroke-linejoin="round"
+            d="m10,58  l8,-16 l8,9 l-5,19 z"></path>
+      <path stroke-width="2" fill="#8C0D0D" stroke="#8C0D0D" troke-linecap="round" stroke-linejoin="round"
+            d="m22,70 h-16 l4,-12 z"></path>
+      <path stroke-width="2" fill="brown" stroke="brown" troke-linecap="round" stroke-linejoin="round"
+            d="m22,70 h7.5 l-6,-4 z "></path>
+      <path stroke-width="2" fill="#B51B1B" stroke="#B51B1B" troke-linecap="round" stroke-linejoin="round"
+            d="m18,42  l9,10.5 l7,-11 l3,-6 h-8 z"></path>
+      <path stroke-width="2" fill="#DA1313" stroke="#DA1313" troke-linecap="round" stroke-linejoin="round"
+            d="m34,45 l8,5 l8,-1 l-4,-10 l-7.5,-3 z"></path>
+       <path stroke-width="2" fill="#F76868" stroke="#F76868" troke-linecap="round" stroke-linejoin="round"
+            d="m42.4,51.3 l11.4,7 l-3,-8 z"></path>
+      <path stroke-width="2" fill="#ED8686" stroke="#ED8686" troke-linecap="round" stroke-linejoin="round"
+            d="m41.8,52 l12,7 l-9.2,10 l-9,-7 z"></path>
+      <path stroke-width="2" fill="#9A3B3B" stroke="#9A3B3B" troke-linecap="round" stroke-linejoin="round"
+            d="m34,63 l9.4,7 h-13 z "></path>
+      <path stroke-width="2" fill="#F3CACA" stroke="#F3CACA" troke-linecap="round" stroke-linejoin="round"
+            d="m44,70 l10,-12 l3,12 z"></path>
+      <path stroke-width="2" fill="#F12323" stroke="#F12323" troke-linecap="round" stroke-linejoin="round"
+            d="m32.5,46 l8,5 l-11,17 l-5.2,-3 l2,-12 l7.3,-7.4"></path>
+    
+
+
+
+
+
+
+      <!-- หญ้าชั้นนอก -->
+        <ellipse cx="94" cy="92" rx="3" ry="8" fill="green"/>
+        <ellipse cx="88" cy="92" rx="3" ry="8" fill="green"/>
+        <ellipse cx="82" cy="92" rx="3" ry="8" fill="green"/>
+        <ellipse cx="76" cy="92" rx="3" ry="8" fill="green"/>
+        <ellipse cx="70" cy="92" rx="3" ry="8" fill="green"/>
+        <ellipse cx="64" cy="92" rx="3" ry="8" fill="green"/>
+        <ellipse cx="58" cy="92" rx="3" ry="8" fill="green"/>
+        <ellipse cx="52" cy="92" rx="3" ry="8" fill="green"/>
+        <ellipse cx="46" cy="92" rx="3" ry="8" fill="green"/>
+        <ellipse cx="40" cy="92" rx="3" ry="8" fill="green"/>
+        <ellipse cx="34" cy="92" rx="3" ry="8" fill="green"/>
+        <ellipse cx="28" cy="92" rx="3" ry="8" fill="green"/>
+        <ellipse cx="22" cy="92" rx="3" ry="8" fill="green"/>
+        <ellipse cx="16" cy="92" rx="3" ry="8" fill="green"/>
+        <ellipse cx="10" cy="92" rx="3" ry="8" fill="green"/>
+        <ellipse cx="4"  cy="92" rx="3" ry="8" fill="green"/>
+
+
+
+      <!-- หญ้าชั้นใน -->
+        <ellipse cx="94" cy="92" rx="2" ry="8" fill="var(--g1)"/>
+        <ellipse cx="88" cy="92" rx="2" ry="8" fill="var(--g1)"/>
+        <ellipse cx="82" cy="92" rx="2" ry="8" fill="var(--g1)"/>
+        <ellipse cx="76" cy="92" rx="2" ry="8" fill="var(--g1)"/>
+        <ellipse cx="70" cy="92" rx="2" ry="8" fill="var(--g1)"/>
+        <ellipse cx="64" cy="92" rx="2" ry="8" fill="var(--g1)"/>
+        <ellipse cx="58" cy="92" rx="2" ry="8" fill="var(--g1)"/>
+        <ellipse cx="52" cy="92" rx="2" ry="8" fill="var(--g1)"/>
+        <ellipse cx="46" cy="92" rx="2" ry="8" fill="var(--g1)"/>
+        <ellipse cx="40" cy="92" rx="2" ry="8" fill="var(--g1)"/>
+        <ellipse cx="34" cy="92" rx="2" ry="8" fill="var(--g1)"/>
+        <ellipse cx="28" cy="92" rx="2" ry="8" fill="var(--g1)"/>
+        <ellipse cx="22" cy="92" rx="2" ry="8" fill="var(--g1)"/>
+        <ellipse cx="16" cy="92" rx="2" ry="8" fill="var(--g1)"/>
+        <ellipse cx="10" cy="92" rx="2" ry="8" fill="var(--g1)"/>
+        <ellipse cx="4"  cy="92" rx="2" ry="8" fill="var(--g1)"/>
+
+
+       <!-- หญ้าชั้นใน -->
+        <ellipse cx="94" cy="92" rx="1" ry="8" fill="var(--g2)"/>
+        <ellipse cx="88" cy="92" rx="1" ry="8" fill="var(--g2)"/>
+        <ellipse cx="82" cy="92" rx="1" ry="8" fill="var(--g2)"/>
+        <ellipse cx="76" cy="92" rx="1" ry="8" fill="var(--g2)"/>
+        <ellipse cx="70" cy="92" rx="1" ry="8" fill="var(--g2)"/>
+        <ellipse cx="64" cy="92" rx="1" ry="8" fill="var(--g2)"/>
+        <ellipse cx="58" cy="92" rx="1" ry="8" fill="var(--g2)"/>
+        <ellipse cx="52" cy="92" rx="1" ry="8" fill="var(--g2)"/>
+        <ellipse cx="46" cy="92" rx="1" ry="8" fill="var(--g2)"/>
+        <ellipse cx="40" cy="92" rx="1" ry="8" fill="var(--g2)"/>
+        <ellipse cx="34" cy="92" rx="1" ry="8" fill="var(--g2)"/>
+        <ellipse cx="28" cy="92" rx="1" ry="8" fill="var(--g2)"/>
+        <ellipse cx="22" cy="92" rx="1" ry="8" fill="var(--g2)"/>
+        <ellipse cx="16" cy="92" rx="1" ry="8" fill="var(--g2)"/>
+        <ellipse cx="10" cy="92" rx="1" ry="8" fill="var(--g2)"/>
+        <ellipse cx="4"  cy="92" rx="1" ry="8"  fill="var(--g2)"/>
+         
+
+
+        <!--ตาเห็ด1-->
+        <circle r="7" cx="37" cy="15" fill="#485355"/>
+        <circle r="6" cx="37" cy="15" fill="white"/>
+        <circle r="3" cx="37" cy="15" fill="#000"/>
+        <circle r="1" cx="39" cy="14" fill="white"/>
+
+        <circle r="7" cx="52" cy="15"   fill="#485355"/>
+        <circle r="6" cx="52" cy="15"   fill="white"/>
+        <circle r="4" cx="52" cy="15"   fill="#000"/>
+        <circle r="1.5" cx="54" cy="14" fill="white"/>
+
+
+
+        <!--ตาเห็ด2-->
+        <circle r="10" cx="75" cy="45" fill="#485355"/>
+        <circle r="9" cx="75" cy="45"  fill="white"/>
+        <circle r="7" cx="75" cy="45"  fill="#000"/>
+        <circle r="3" cx="80" cy="40"  fill="white"/>
+
+
+
+        <!--ลิ้นเห็ด3-->
+        <svg>
+        <animate attributeName="x" 
+                     values="0;-5;0;5;0" dur="4s" repeatCount="indefinite" />
+        <path stroke-width="2" fill="#d50000" stroke="black"troke-linecap="round" stroke-linejoin="round" 
+            d="m25,60 c-10,20 20,20 10,0 z">
+      </path>
+      <path stroke-width="2" fill="#d50000" stroke="black"troke-linecap="round" stroke-linejoin="round"
+           d="m25,60 h5 v9"></path>
+         </svg>
+
+
+       <!--ดอกไม้ใหญ่กลีบนอก-->
+       <circle r="1.8" cx="94" cy="82.5" fill="orange"/>
+       <circle r="1.8" cx="82" cy="82.5" fill="var(--f4)"/>
+       <circle r="1.8" cx="76" cy="82.5" fill="orange"/>
+       <circle r="1.8" cx="64" cy="82.5" fill="var(--f4)"/>
+       <circle r="1.8" cx="52" cy="82.5" fill="orange"/>
+       <circle r="1.8" cx="46" cy="82.5" fill="var(--f4)"/>
+       <circle r="1.8" cx="40" cy="82.5" fill="orange"/>
+       <circle r="1.8" cx="22" cy="82.5" fill="var(--f4)"/>
+       <circle r="1.8" cx="16" cy="82.5" fill="orange"/>
+       <circle r="1.8" cx="10" cy="82.5" fill="var(--f4)"/>
+
+
+
+       <!--ดอกไม้ใหญ่กลีบใน-->
+        <circle r="1.5" cx="94" cy="82.5" fill="var(--f1)"/>
+        <circle r="1"   cx="88" cy="83"   fill="var(--f3)" stroke-width=".7" stroke="#000"/>
+        <circle r="1.5" cx="82" cy="82.5" fill="var(--f1)"/>
+        <circle r="1.5" cx="76" cy="82.5" fill="var(--f1)"/>
+        <circle r="1"   cx="70" cy="83"   fill="var(--f3)" stroke-width=".7" stroke="#000"/>
+        <circle r="1.5" cx="64" cy="82.5" fill="var(--f1)"/>
+        <circle r="1"   cx="58" cy="83"   fill="var(--f3)" stroke-width=".7" stroke="#000"/>
+        <circle r="1.5" cx="52" cy="82.5" fill="var(--f1)"/>
+        <circle r="1.5" cx="46" cy="82.5" fill="var(--f1)"/>
+        <circle r="1.5" cx="40" cy="82.5" fill="var(--f1)"/>
+        <circle r="1"   cx="34" cy="83"   fill="var(--f3)" stroke-width=".7" stroke="#000"/>
+        <circle r="1"   cx="28" cy="83"   fill="var(--f3)" stroke-width=".7" stroke="#000"/>
+        <circle r="1.5" cx="22" cy="82.5" fill="var(--f1)"/>
+        <circle r="1.5" cx="16" cy="82.5" fill="var(--f1)"/>
+        <circle r="1.5" cx="10" cy="82.5" fill="var(--f1)"/>
+        <circle r="1"   cx="4"  cy="83"   fill="var(--f3)" stroke-width=".7" stroke="#000"/>
+        
+
+       <!--ดอกไม้เล็ก-->
+       <circle r="1"   cx="92" cy="81" fill="var(--f2)"/>
+       <circle r="0.5" cx="92" cy="81" fill="#FACDDE"/>
+
+       <circle r="1"   cx="80" cy="81" fill="var(--f2)"/>
+       <circle r="0.5" cx="80" cy="81" fill="#FACDDE"/>
+
+       <circle r="1"   cx="52" cy="80" fill="var(--f2)"/>
+       <circle r="0.5" cx="52" cy="80" fill="#FACDDE"/>
+       <circle r="1"   cx="46" cy="80" fill="var(--f2)"/>
+       <circle r="0.5" cx="46" cy="80" fill="#FACDDE"/>
+       <circle r="1"   cx="40" cy="80" fill="var(--f2)"/>
+       <circle r="0.5" cx="40" cy="80" fill="#FACDDE"/>
+
+       <circle r="1"   cx="17" cy="80" fill="var(--f2)"/>
+       <circle r="0.5" cx="17" cy="80" fill="#FACDDE"/>
+       <circle r="1"   cx="11" cy="80" fill="var(--f2)"/>
+       <circle r="0.5" cx="11" cy="80" fill="#FACDDE"/>
+
+
+       <svg>
+     <animate attributeName="y" 
+          values="0;-15;5;-40" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="x" 
+          values="0;-10;-40;-80" dur="4s" repeatCount="indefinite" />
+
+      <!--กระต่าย-->
+      <ellipse cx="85" cy="87" rx="12" ry="9" fill="#F176E8"/>
+      <ellipse cx="85" cy="85" rx="10" ry="7" fill="#F176E8"/>
+      <circle  r="3"   cx="95" cy="83"        fill="url(#rabbit)"/>
+
+      <!--หูกระต่าย-->
+      <ellipse cx="83" cy="76" rx="2" ry="6" fill="url(#rabbitear)"/>
+      <ellipse cx="83" cy="76" rx="1" ry="6" fill="#F176E8"/>
+
+      <ellipse cx="85" cy="80" rx="2" ry="6" fill="url(#rabbitear)"/>
+      <ellipse cx="85" cy="80" rx="1" ry="6" fill="#F176E8"/>
+
+      <!--ตากระต่าย-->
+      <circle r="2"  cx="79" cy="83" fill="white"/>
+      <circle r="1"  cx="78" cy="83" fill="#000"/>
+      <circle r=".5" cx="79" cy="83" fill="#fff"/>
+
+
+      <circle r="2"  cx="79" cy="86" fill="white"/>
+      <circle r="1"  cx="78" cy="86" fill="#000"/>
+      <circle r=".5" cx="79" cy="86" fill="#fff"/>
+
+      <!--จมูกกระต่าย-->
+      <ellipse cx="76" cy="84" rx="1" ry="2" fill="var(--n1)"/>
+      <ellipse cx="76" cy="84" rx="0.9" ry="1" fill="var(--n2)"/>
+
+      <!--ขา-->
+      <path stroke-width="0.4" fill="#F176E8" stroke="#F176E8"troke-linecap="round" stroke-linejoin="round"
+            d="  M90,93 q12,5 5,-2"/>
+      <path stroke-width="0.4" fill="#F176E8" stroke="#F176E8"troke-linecap="round" stroke-linejoin="round"
+            d="  M90,90 q12,5 5,-2"/>
+      <path stroke-width="0.4" fill="#F176E8" stroke="#F176E8"troke-linecap="round" stroke-linejoin="round"
+            d="  M75,90 q-6,9 5,3"/>
+      </svg>
+    
+      <!--ม่าน-->
+
+       <svg>
+      <animate attributeName="x" 
+                     values="45;100" dur="8s" repeatCount="indefinite" />
+            <path stroke-width="2" fill="var(--c1)" stroke="var(--c2)"troke-linecap="round" stroke-linejoin="round" style="opacity:.9"
+               d=" M30,0 q40,189 70,0"/>
+            
+      </svg>
+
+      <svg>
+      <animate attributeName="x" 
+                     values="-45;-100" dur="8s" repeatCount="indefinite" />
+            <path stroke-width="2" fill="var(--c1)" stroke="var(--c2)"troke-linecap="round" stroke-linejoin="round" style="opacity:.9"
+               d=" M0,0 q40,189 70,0"/>
+          
+      </svg>
+ </svg>
+ <div class="crown"></div>
+ <div class="crown"></div>
+ <div class="big"></div>
+<button class="Soft" id="txt_white" onclick="mun(this, '#64F408')">ขอบคุณสำหรับทุกอย่างครัช</button>
+
+ <script>
+      function mun(elmnt,clr){
+         elmnt.style.color = clr;
+      }
+ </script>
+</body>
+</html>
