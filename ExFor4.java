@@ -1,0 +1,9 @@
+import java.*;
+public class ExFor4 {
+    public static void main(String[] args) {
+        for(int x = -10; x <= 20; x+=5){
+            System.out.println(x);
+        }
+    }
+    
+}
