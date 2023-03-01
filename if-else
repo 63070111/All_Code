@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<ctype.h>
+int main(){
+	char a,b;
+	scanf("%c %c",&a,&b);
+	if (a == 'R' && b == 'S')
+	{
+		printf("Win");
+	}
+	else if (a == 'R' && b == 'P')
+	{
+		printf("Lose");
+	}
+	else if (a == 'S' && b == 'P')
+	{
+		printf("Win");
+	}
+	else if (a == 'S' && b == 'R')
+	{
+		printf("Lose");
+	}
+	else if (a == 'P' && b == 'R')
+	{
+		printf("Win");
+	}
+	else if (a == 'P' && b == 'S')
+	{
+		printf("Lose");
+	}
+	else if (a == 'P' && b == 'P')
+	{
+		printf("Draw");
+	}
+
+    else if (a == 'S' && b == 'S')
+	{
+		printf("Draw");
+	}
+
+    else if (a == 'R' && b == 'R')
+	{
+		printf("Draw");
+	}
+	else
+	{
+		printf("Error");
+	}
+
+
+	return 0;
+}
