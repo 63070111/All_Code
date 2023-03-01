@@ -1,0 +1,22 @@
+"""BigFrame"""
+def picture():
+    """รูป"""
+    name1 = input().rstrip()
+    name2 = input().rstrip()
+    name3 = input().rstrip()
+    name4 = input().rstrip()
+    name5 = input().rstrip()
+    space1 = len(name1)
+    space2 = len(name2)
+    space3 = len(name3)
+    space4 = len(name4)
+    space5 = len(name5)
+    box = max(space1, space2, space3, space4, space5)
+    print("*"*(box+4))
+    print("* " + name1 + " " * (box - space1) + " *")
+    print("* " + name2 + " " * (box - space2) + " *")
+    print("* " + name3 + " " * (box - space3) + " *")
+    print("* " + name4 + " " * (box - space4) + " *")
+    print("* " + name5 + " " * (box - space5) + " *")
+    print("*" * (box+4))
+picture()
